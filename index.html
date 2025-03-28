@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عيد ميلاد سعيد ماجد هاني</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000d1a;
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            overflow-y: scroll;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(255,0,150,0.2) 0%, rgba(0,0,0,0) 70%);
+            animation: backgroundMove 5s infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes backgroundMove {
+            0% { transform: translateY(-20px); }
+            100% { transform: translateY(20px); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff4500;
+            animation: glow 1.5s infinite alternate, float 3s infinite ease-in-out;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-top: -10px;
+            opacity: 0;
+            animation: fadeInText 2s 1.5s forwards;
+        }
+
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ff0000; }
+            to { text-shadow: 0 0 30px #ff4500, 0 0 60px #ff0000; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .main-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="content">
+        <img src="maged.jpg" alt="عيد ميلاد ماجد" class="main-image" />
+        <h1>عيد ميلاد سعيد يا ماجد هاني!</h1>
+        <p>نتمنى لك سنة جديدة مليانة فرحة ونجاح! 🎉</p>
+
+        <!-- تهنئة -->
+        <section class="greeting">
+            <h2>تهنئة خاصة</h2>
+            <p>أتمنى يكون يومك مليان حب وفرحة وكثير من التورتة! 🎂</p>
+        </section>
+
+        <!-- معلومات عن ماجد -->
+        <section class="about-maged">
+            <h2>عن ماجد هاني</h2>
+            <p>ماجد هو محترف في تصميم وتطوير الواجهات، وماهر في الكود والتصميم! 🚀</p>
+        </section>
+
+        <!-- سكشن التريقة على الفرونت اند -->
+        <section class="frontend-joke">
+            <h2>مطور واجهات... ولا مجرد نقاش؟ 😂</h2>
+            <p>بصراحة، ترتيب الـ divs وتنسيق الألوان ده يعتبر فن تشكيلي بجد! 🎨</p>
+        </section>
+
+        <!-- سكشن تهنئة إضافية -->
+        <section class="extra-greeting">
+            <h2>تهنئة إضافية!</h2>
+            <p>كل سنة وانت طيب يا ماجد! استمر في التألق! 🌟</p>
+        </section>
+    </div>
+</body>
+</html>
